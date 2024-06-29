@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC');
+
+.App {
+  padding: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+header {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: 'Playfair Display SC';
+  font-size: 64px;
+  text-align: center;
+}
+
+/* typography */
+
+html {
+  font-family: 'helvetica neue', sans-serif;
+}
+
+thead th, tfoot th {
+  font-family: 'Rock Salt';
+}
+
+th {
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+td {
+  letter-spacing: 1px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* table */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  overflow:hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.content_td p {
+  max-width: 100%;
+  max-height: 100px;
+  overflow-y: auto;
+  text-overflow: ellipsis;
+}
+
+
+/* Set column widths using nth-child */
+.recipe-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recipe-list th,
+.recipe-list td {
+  padding: 8px;
+  text-align: left;
+}
+
+.recipe-list th:nth-child(1),
+.recipe-list td:nth-child(1),
+.recipe-list th:nth-child(2),
+.recipe-list td:nth-child(2),
+.recipe-list th:nth-child(3),
+.recipe-list td:nth-child(3),
+.recipe-list th:nth-child(6),
+.recipe-list td:nth-child(6) {
+  width: 10%;
+}
+
+.recipe-list th:nth-child(4),
+.recipe-list td:nth-child(4),
+.recipe-list th:nth-child(5),
+.recipe-list td:nth-child(5) {
+  width: 30%; /* Ingredients and Preparation columns */
+}
+
+/* Zebra striping using nth-child(odd) */
+.recipe-list tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Light gray background for odd rows */
+}
+
+/* Set scrollbar for long text in content columns */
+.content_td {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content_td p {
+  overflow: auto; /* Enable scrollbar for long text */
+  max-height: 100px; /* Adjust this height as needed */
+}
+
+/* Scale down images */
+.recipe-list img {
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+}
+
